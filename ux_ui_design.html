@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website UX/UI Design Page- Ulises Rönnau</title>
+    <link rel="stylesheet" href="ux_ui_design.css">
+    <script src="https://kit.fontawesome.com/4370b8b097.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/ulises-logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<!---------------information------------------>
+<div id="information">
+    <div class="container">
+        <div class="row">
+            <div class="information-col-1">
+                <img src="images/ulises-user-2.png">
+            </div>
+            <div class="information-col-2">
+                <h1 class="sub-title">UX/UI Design</h1>
+                <p class="main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Fusce non accumsan sapien, id finibus ex. Aenean ut mattis nibh, eget ullamcorper
+                eros. Nullam vel mattis nibh, euismod euismod lacus. Duis maximus libero turpis,
+                non fringilla ligula ullamcorper eget. Vestibulum nec egestas justo. Nunc imperdiet
+                iaculis mi lacinia rutrum. Nulla vestibulum dolor id nulla auctor aliquam. Suspendisse
+                dapibus lacinia purus, at tristique quam feugiat non. Sed cursus neque non lorem
+                blandit dignissim. Praesent pharetra purus in ante tempor, eu viverra justo rutrum.
+                Phasellus semper consequat urna. Aliquam pulvinar cursus ornare. Pellentesque
+                pellentesque vel eros a rhoncus.
+
+                Maecenas gravida nunc ut dui mattis, sit amet suscipit libero varius. Vestibulum commodo
+                condimentum odio, ut rutrum justo vulputate non. Donec rutrum sem sit amet vestibulum
+                efficitur. Suspendisse a erat congue, vehicula risus malesuada, vehicula neque. Aenean et
+                turpis augue. Nullam a ullamcorper dolor. Aliquam porta dui id tellus condimentum, in
+                iaculis dolor tincidunt. Nullam eget mauris mi. Pellentesque at arcu sit amet nisi sodales
+                suctus. Praesent quis nunc et neque euismod aliquet a at enim.  Maecenas ultricies
+                fringilla tortor, quis interdum est vehicula dictum. Duis risus tortor, molestie in maximus
+                at, faucibus ut ligula. Phasellus gravida, lorem consectetur finibus mattis, ante elit
+                tristique purus.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------services---------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>I do not currently offer any services. This website was designed for personal
+                    pleasure and with the goal to learn HTML and CSS. These pages will be updated
+                    as soon as I begin to offer my services publicly.</p>
+                <a href="web_design.html">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>I do not currently offer any services. This website was designed for personal
+                    pleasure and with the goal to learn HTML and CSS. These pages will be updated
+                    as soon as I begin to offer my services publicly..</p>
+                <a href="app_design.html">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------contact------------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> ulises.roennau@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone-flip"></i> +1 (704) 884-6814</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ulises-roennau-a32b432b2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/Ulises Rönnau's General Resume (as of 101524).pdf" download class="btn btn 2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Ulises.</p>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0"
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwLvogkWDBAVz86Jmf25BrbsRbehx1-6G4yNt-oSQXPt8JnPn_f1p6RnBePPpZjJqEB/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
