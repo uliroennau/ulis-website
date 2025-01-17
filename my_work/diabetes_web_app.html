@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website App Design Page- Ulises Rönnau</title>
+    <link rel="stylesheet" href="diabetes_web_app.css">
+    <script src="https://kit.fontawesome.com/4370b8b097.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="../images/ulises-logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#portfolio">Other Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<!---------------information------------------>
+
+<div id="information">
+    <div class="container">
+        <div class="row">
+            <div class="information-col-1">
+                <img src="../images/diabetes-test-app-picture.png">
+            </div>
+            <div class="information-col-2">
+                <h1 class="sub-title">Diabetes Test</h1>
+                <p class="main-text">As someone with a strong family history of diabetes and a deep interest in biological sciences—which I've explored extensively in my genetics lab work—I felt compelled to create a project that could combine my technical skills with a meaningful application. This led to the development of a diabetes prediction web application designed to assist both patients and doctors in assessing the likelihood of diabetes based on user-provided features.</p>
+                <h2>Overview of the Project</h2>
+                <p class="main-text">The web app allows users to input various health metrics, including BMI, age, weight, and the number of pregnancies. These inputs are processed through a machine learning model to predict whether an individual is likely to have diabetes. The tool is built to be user-friendly and accessible, aiming to provide a preliminary risk assessment.</p>
+                <h2>Data and Preparation</h2>
+                <p class="main-text">To build this application, I started with a dataset containing 767 entries of female individuals, each with features such as BMI, age, weight, and a diabetes diagnosis label. The dataset served as the foundation for the machine learning model. After importing essential libraries like Scikit-learn, NumPy, and Pandas, I performed feature engineering to refine the dataset. This involved removing unnecessary labels and standardizing the data to a range of -1 to 1 to improve model accuracy. The data was then split into training and test datasets for validation.</p>
+                <h2>Machine Learning Model</h2>
+                <p class="main-text">For the prediction task, I implemented a Support Vector Machine (SVM) classifier. The model was trained on the prepared data to classify new inputs as either diabetic or non-diabetic. After training, I evaluated the model's performance, achieving an accuracy of 78% on the test data.</p>
+                <h2>Deployment</h2>
+                <p class="main-text">To make the application accessible, I used Streamlit to develop a web-based interface and deployed it online. The web app allows users to input their data and receive instant predictions, making it a practical tool for preliminary diabetes risk assessment.</p>
+                <h2>Conclusion</h2>
+                <p class="main-text">This project is a reflection of my passion for integrating data science with biology to address real-world challenges. It represents a meaningful step in my journey to combine technical expertise with biological research to make impactful contributions to healthcare.</p>
+                <p>Feel free to explore the <a href="https://diabetes-self-test.streamlit.app/" target="_blank">application</a> and learn more about how it works!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------------other projects---------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="../images/work-2.png">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>The app connects you to talented people around the world.
+                    Download it from the play store. (placeholder.)</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="../images/work-3.png">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>The app connects you to talented people around the world.
+                    Download it from the play store. (placeholder.)</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-----------------contact------------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> ulises.roennau@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone-flip"></i> +1 (704) 884-6814</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ulises-roennau-a32b432b2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/Ulises Rönnau's General Resume (as of 101524).pdf" download class="btn btn 2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Ulises.</p>
+    </div>
+</div>
+
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0"
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwLvogkWDBAVz86Jmf25BrbsRbehx1-6G4yNt-oSQXPt8JnPn_f1p6RnBePPpZjJqEB/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
