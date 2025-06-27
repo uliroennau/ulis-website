@@ -1,0 +1,7 @@
+- clickeable buttons for call and email
+- actual updated info on services offered
+- change projects flow so that it give popup instead of new page
+- add year to copyright
+- make projects open in new tab
+- add text to TextScape that tells you to wait a minute for backend to load
+- get domain name for portfolio
