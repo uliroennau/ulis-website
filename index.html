@@ -5,36 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website - Ulises Rönnau</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://kit.fontawesome.com/4370b8b097.js" crossorigin="anonymous"></script>
 </head>
-<script>
-  // Load Navbar
-  fetch('includes/navbar.html')
-    .then(res => res.text())
-    .then(html => { document.getElementById('navbar-include').innerHTML = html; });
-
-  // Load Footer
-  fetch('includes/footer.html')
-    .then(res => res.text())
-    .then(html => { document.getElementById('footer-include').innerHTML = html; });
-</script>
-<script>
-fetch('projects.json')
-  .then(res => res.json())
-  .then(projects => {
-    document.getElementById('project-list').innerHTML = projects.map(project => `
-      <div class="work">
-        <img src="${project.image}">
-        <div class="layer">
-          <h3>${project.title}</h3>
-          <p>${project.description}</p>
-          <a href="${project.link}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-    `).join('');
-  });
-</script>
-
 <body class="index-page">
 <div id="header">
     <div class="container">
@@ -50,12 +23,12 @@ fetch('projects.json')
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/ulises-user-2.png">
+                <img src="images/ulises-user-2.png" alt="Ulises Portrait">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p>I'm a student at the University of North Carolina at Chapel Hill, where
-                I studying Data Science. Growing up across four continents, and having
+                I am studying Data Science. Growing up across four continents, and having
                 roots in Germany and Argentina, the diversity of information around me has
                 always been a great inspiration. This curiosity has driven me to explore new
                 fields, from international business at BMW to ecological city-planning at
@@ -104,7 +77,7 @@ fetch('projects.json')
                 <p>I do not currently offer any services. This website was designed for personal
                 pleasure and with the goal to learn HTML and CSS. These pages will be updated
                 as soon as I begin to offer my services publicly.</p>
-                <a href="web_design.html">Learn more</a>
+                <a href="services/web_design.html">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-crop"></i>
@@ -112,7 +85,7 @@ fetch('projects.json')
                 <p>I do not currently offer any services. This website was designed for personal
                 pleasure and with the goal to learn HTML and CSS. These pages will be updated
                 as soon as I begin to offer my services publicly.</p>
-                <a href="ux_ui_design.html">Learn more</a>
+                <a href="services/ux_ui_design.html">Learn more</a>
             </div>
             <div>
                 <i class="fa-brands fa-app-store"></i>
@@ -120,7 +93,7 @@ fetch('projects.json')
                 <p>I do not currently offer any services. This website was designed for personal
                 pleasure and with the goal to learn HTML and CSS. These pages will be updated
                 as soon as I begin to offer my services publicly.</p>
-                <a href="app_design.html">Learn more</a>
+                <a href="services/app_design.html">Learn more</a>
             </div>
         </div>
     </div>
@@ -130,7 +103,7 @@ fetch('projects.json')
     <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list" id="project-list"></div>
-        <a href="#" class="btn">See more</a>
+        <button id="see-more-btn" class="btn">See More</button>
     </div>
 </div>
 <!-----------------contact------------------>
@@ -160,12 +133,56 @@ fetch('projects.json')
     <div id="footer-include"></div>
 </div>
 
+<!-- SCRIPTS (Place all scripts at the end!) -->
+<script>
+  // Load Navbar
+  fetch('includes/navbar.html')
+    .then(res => res.text())
+    .then(html => { document.getElementById('navbar-include').innerHTML = html; });
 
-
-
+  // Load Footer
+  fetch('includes/footer.html')
+    .then(res => res.text())
+    .then(html => { document.getElementById('footer-include').innerHTML = html; });
+</script>
 
 <script>
+let allProjects = [];
+const PROJECTS_TO_SHOW = 3; // Number to show by default
+let showingAll = false;
 
+// This function renders either the top 3 or all projects
+function renderProjects(showAll) {
+  const projectsToDisplay = showAll ? allProjects : allProjects.slice(0, PROJECTS_TO_SHOW);
+  document.getElementById('project-list').innerHTML = projectsToDisplay.map(project => `
+    <div class="work">
+      <img src="${project.image}" alt="${project.title}">
+      <div class="layer">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        <a href="${project.link}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('see-more-btn').textContent = showAll ? 'Show Less' : 'See More';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('projects.json')
+    .then(res => res.json())
+    .then(projects => {
+      allProjects = projects;
+      renderProjects(false);
+    });
+
+  document.getElementById('see-more-btn').addEventListener('click', () => {
+    showingAll = !showingAll;
+    renderProjects(showingAll);
+  });
+});
+</script>
+
+<script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
     function opentab(tabname){
@@ -178,20 +195,16 @@ fetch('projects.json')
         event.currentTarget.classList.add("active-link")
         document.getElementById(tabname).classList.add("active-tab")
     }
-
 </script>
 
 <script>
-
     var sidemenu = document.getElementById("sidemenu");
-
     function openmenu(){
         sidemenu.style.right = "0"
     }
     function closemenu(){
         sidemenu.style.right = "-200px"
     }
-
 </script>
 
 <script>
@@ -211,8 +224,6 @@ fetch('projects.json')
         })
         .catch(error => console.error('Error!', error.message))
     })
-  </script>
-
-
+</script>
 </body>
 </html>

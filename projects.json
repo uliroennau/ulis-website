@@ -1,20 +1,20 @@
 [
   {
-    "title": "Diabetes Test Web App",
-    "description": "A web app for diabetes prediction using medical data.",
-    "image": "images/diabetes-image.png",
-    "link": "projects/diabetes.html"
+    "title": "Diabetes Self-Test",
+    "description": "A user-friendly web application that predicts the likelihood of diabetes based on personal medical information, providing quick and accessible results.",
+    "image": "images/diabetes_self_test_for_index.png",
+    "link": "projects/diabetes_self_test.html"
   },
   {
-    "title": "Music App",
-    "description": "The app connects you to talented people around the world. (placeholder)",
-    "image": "images/work-2.png",
-    "link": "#"
+    "title": "TextScape",
+    "description": "TextScape displays a 3D map of text chunks based on their semantic similarity—use the filters and search to explore related content, and click any point to view or download the underlying text.",
+    "image": "images/textscape_icon_for_index.png",
+    "link": "https://textscapemaps.netlify.app/"
   },
   {
-    "title": "Online Shopping App",
-    "description": "The app connects you to talented people around the world. (placeholder)",
-    "image": "images/work-3.png",
-    "link": "#"
+    "title": "Victorian Simplicity",
+    "description": "Victorian Simplicity is an exhibition website designed to capture and display a counter-narrative of the Victorian Era, namely that it was a simple time.",
+    "image": "images/victorian_simplicity_for_index.png",
+    "link": "https://sites.google.com/view/victoriansimplicity/home"
   }
 ]
