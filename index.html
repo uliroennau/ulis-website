@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="index_style.css">
     <script src="https://kit.fontawesome.com/4370b8b097.js" crossorigin="anonymous"></script>
 </head>
+<script>
+  // Load Navbar
+  fetch('includes/navbar.html')
+    .then(res => res.text())
+    .then(html => { document.getElementById('navbar-include').innerHTML = html; });
+
+  // Load Footer
+  fetch('includes/footer.html')
+    .then(res => res.text())
+    .then(html => { document.getElementById('footer-include').innerHTML = html; });
+</script>
 <body>
 <div id="header">
     <div class="container">
-        <nav>
-            <img src="images/ulises-logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
+        <div id="navbar-include"></div>
         <div class="header-text">
             <p>UNC Data Science</p>
             <h1>Hi, I'm <span>Uli</span> Rönnau<br>from Germany</h1>
@@ -167,9 +167,7 @@
             </div>
         </div>
     </div>
-    <div class="copyright">
-        <p>Copyright © Ulises.</p>
-    </div>
+    <div id="footer-include"></div>
 </div>
 
 

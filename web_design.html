@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="web_design_style.css">
     <script src="https://kit.fontawesome.com/4370b8b097.js" crossorigin="anonymous"></script>
 </head>
+<script>
+  // Load Navbar
+  fetch('includes/navbar.html')
+    .then(res => res.text())
+    .then(html => { document.getElementById('navbar-include').innerHTML = html; });
+
+  // Load Footer
+  fetch('includes/footer.html')
+    .then(res => res.text())
+    .then(html => { document.getElementById('footer-include').innerHTML = html; });
+</script>
+
 <body>
 <div id="header">
     <div class="container">
-        <nav>
-            <img src="images/ulises-logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
+        <div id="navbar-include"></div>
     </div>
 </div>
 <!---------------information------------------>
@@ -102,9 +106,7 @@
             </div>
         </div>
     </div>
-    <div class="copyright">
-        <p>Copyright © Ulises.</p>
-    </div>
+    <div id="footer-include"></div>
 </div>
 
 
