@@ -18,6 +18,23 @@
     .then(res => res.text())
     .then(html => { document.getElementById('footer-include').innerHTML = html; });
 </script>
+<script>
+fetch('projects.json')
+  .then(res => res.json())
+  .then(projects => {
+    document.getElementById('project-list').innerHTML = projects.map(project => `
+      <div class="work">
+        <img src="${project.image}">
+        <div class="layer">
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+          <a href="${project.link}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    `).join('');
+  });
+</script>
+
 <body class="index-page">
 <div id="header">
     <div class="container">
@@ -112,34 +129,7 @@
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/diabetes-image.png">
-                <div class="layer">
-                    <h3>Diabetest Test</h3>
-                    <p>This web app allows doctors and patients to be tested for diabetes using only a few pieces of their medical data.</p>
-                    <a href="/ulis-website/my_work/diabetes_web_app.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work-2.png">
-                <div class="layer">
-                    <h3>Music App</h3>
-                    <p>The app connects you to talented people around the world.
-                    Download it from the play store. (placeholder.)</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work-3.png">
-                <div class="layer">
-                    <h3>Online Shopping App</h3>
-                    <p>The app connects you to talented people around the world.
-                    Download it from the play store. (placeholder.)</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-        </div>
+        <div class="work-list" id="project-list"></div>
         <a href="#" class="btn">See more</a>
     </div>
 </div>

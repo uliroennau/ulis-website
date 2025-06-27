@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Diabetes Test Web App",
+    "description": "A web app for diabetes prediction using medical data.",
+    "image": "images/diabetes-image.png",
+    "link": "projects/diabetes.html"
+  },
+  {
+    "title": "Music App",
+    "description": "The app connects you to talented people around the world. (placeholder)",
+    "image": "images/work-2.png",
+    "link": "#"
+  },
+  {
+    "title": "Online Shopping App",
+    "description": "The app connects you to talented people around the world. (placeholder)",
+    "image": "images/work-3.png",
+    "link": "#"
+  }
+]
