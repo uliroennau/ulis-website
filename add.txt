@@ -1,4 +1,3 @@
-- clickeable buttons for call and email
 - actual updated info on services offered
 - change projects flow so that it give popup instead of new page
 - add year to copyright

@@ -245,6 +245,21 @@ h1 {
     background: #7BAFD4;
     transform: translateY(-10px);
 }
+.learn-more-link {
+    color: #ababab;             /* Subtle, matches your info text */
+    text-decoration: none;      /* No underline */
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
+    transition: none;
+}
+.learn-more-link:hover {
+    text-decoration: none;      /* Still no underline */
+}
 
 /* ====== Portfolio Section (Index only) ====== */
 #portfolio {
