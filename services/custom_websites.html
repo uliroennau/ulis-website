@@ -1,153 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website Web Design Page- Ulises Rönnau</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/png" href="../favicon.png">
-    <script src="https://kit.fontawesome.com/4370b8b097.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Websites – Ulises Rönnau</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/services_style.css"/>
+  <link rel="icon" type="image/png" href="../favicon.png"/>
+  <script src="https://kit.fontawesome.com/4370b8b097.js" crossorigin="anonymous"></script>
+  <style>
+    .row {
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+    }
+    .information-col-1,
+    .information-col-2 {
+      flex: 1;
+    }
+    .information-col-1 img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 16px;
+      display: block;
+      margin: 0 auto;
+    }
+    #information {
+      margin-top: 0 !important;
+    }
+    @media (max-width: 900px) {
+      .row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .information-col-1,
+      .information-col-2 {
+        max-width: 100%;
+        margin: 0 0 28px 0;
+      }
+    }
+    .spotlight-card {
+      background: #1e1e1e;
+      color: #fff;
+      border-radius: 14px;
+      box-shadow: 0 1px 10px rgba(123,175,212,0.1);
+      padding: 32px;
+      margin: 34px auto 0 auto;
+      max-width: 670px;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .spotlight-text {
+      flex: 1 1 300px;
+    }
+    .spotlight-image {
+      flex: 0 1 200px;
+      max-width: 200px;
+    }
+    .spotlight-image img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+    .spotlight-card .splight-title {
+      font-weight: 600;
+      color: #7BAFD4;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .spotlight-card a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    @media (max-width: 700px) {
+      .spotlight-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      .spotlight-text {
+        max-width: 100%;
+      }
+      .spotlight-image {
+        max-width: 220px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+
+<!-- NAVBAR -->
 <div id="header">
-    <div class="container">
-        <div id="navbar-include"></div>
-    </div>
-</div>
-<!---------------information------------------>
-<div id="information">
-    <div class="container">
-        <div class="row">
-            <div class="information-col-1">
-                <img src="../images/ulises-user-2.jpg" alt="Ulises Rönnau">
-            </div>
-            <div class="information-col-2">
-                <h1 class="sub-title">Web Design</h1>
-                <p class="main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Fusce non accumsan sapien, id finibus ex. Aenean ut mattis nibh, eget ullamcorper
-                eros. Nullam vel mattis nibh, euismod euismod lacus. Duis maximus libero turpis,
-                non fringilla ligula ullamcorper eget. Vestibulum nec egestas justo. Nunc imperdiet
-                iaculis mi lacinia rutrum. Nulla vestibulum dolor id nulla auctor aliquam. Suspendisse
-                dapibus lacinia purus, at tristique quam feugiat non. Sed cursus neque non lorem
-                blandit dignissim. Praesent pharetra purus in ante tempor, eu viverra justo rutrum.
-                Phasellus semper consequat urna. Aliquam pulvinar cursus ornare. Pellentesque
-                pellentesque vel eros a rhoncus.
-
-                Maecenas gravida nunc ut dui mattis, sit amet suscipit libero varius. Vestibulum commodo
-                condimentum odio, ut rutrum justo vulputate non. Donec rutrum sem sit amet vestibulum
-                efficitur. Suspendisse a erat congue, vehicula risus malesuada, vehicula neque. Aenean et
-                turpis augue. Nullam a ullamcorper dolor. Aliquam porta dui id tellus condimentum, in
-                iaculis dolor tincidunt. Nullam eget mauris mi. Pellentesque at arcu sit amet nisi sodales
-                suctus. Praesent quis nunc et neque euismod aliquet a at enim.  Maecenas ultricies
-                fringilla tortor, quis interdum est vehicula dictum. Duis risus tortor, molestie in maximus
-                at, faucibus ut ligula. Phasellus gravida, lorem consectetur finibus mattis, ante elit
-                tristique purus.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-----------------services---------------------->
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-crop"></i>
-                <h2>UX/UI Design</h2>
-                <p>Lorem ipsum dolor sit amet, elit iuvaret ne pri. Populo equidem consetetur
-                his te, ea illum regione consulatu vim.</p>
-                <a href="ux_ui_design.html">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>App Design</h2>
-                <p>Lorem ipsum dolor sit amet, elit iuvaret ne pri. Populo equidem consetetur
-                his te, ea illum regione consulatu vim.</p>
-                <a href="app_design.html">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-----------------contact------------------>
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p>
-                    <a href="mailto:ulises.roennau@gmail.com" class="contact-icon-link">
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </a>
-                    ulises.roennau@gmail.com
-                    </p>
-                    <p>
-                    <a href="tel:+17048846814" class="contact-icon-link">
-                        <i class="fa-solid fa-square-phone-flip"></i>
-                    </a>
-                    +1 (704) 884-6814
-                </p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/ulises-roennau-a32b432b2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <a href="../images/UlisesRonnau_Multilingual_ML_Engineer.pdf" download class="btn btn 2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-        </div>
-    </div>
-    <div id="footer-include"></div>
+  <div class="container">
+    <div id="navbar-include"></div>
+  </div>
 </div>
 
-<!-- SCRIPTS AT THE END -->
+<!-- MAIN CONTENT -->
+<div id="information" class="section-spacer">
+  <div class="container">
+    <div class="row">
+      <div class="information-col-1">
+        <img src="../images/custom_websites.png" alt="Ulises Rönnau"/>
+      </div>
+      <div class="information-col-2">
+        <div class="tutor-card">
+          <h2><i class="fa-solid fa-laptop-code" style="font-size:1.4em;vertical-align:-4px;"></i> Custom Websites</h2>
+          <div class="tutor-info-grid">
+            <div><i class="fa-solid fa-palette"></i> <span class="label">Design:</span></div>
+            <div>Clean, elegant websites that reflect your personality, brand, or academic work.</div>
+            <div><i class="fa-solid fa-code"></i> <span class="label">Technology:</span></div>
+            <div>HTML, CSS, JavaScript, responsive design, performance optimization, and accessibility.</div>
+            <div><i class="fa-solid fa-rocket"></i> <span class="label">Speed:</span></div>
+            <div>Fast loading, mobile-optimized, lightweight builds that respect users' time and data.</div>
+            <div><i class="fa-solid fa-users"></i> <span class="label">Clients:</span></div>
+            <div>Students, professionals, artists, startups, and personal brands.</div>
+            <div><i class="fa-solid fa-location-dot"></i> <span class="label">Where:</span></div>
+            <div>Available worldwide — fully remote collaboration with screen sharing and email support.</div>
+          </div>
+          <div class="divider"></div>
+          <div class="rates"><i class="fa-solid fa-coins"></i> Affordable pricing &middot; Flat fee or hourly</div>
+          <div class="divider"></div>
+          <div style="margin-top: 10px; font-size: 16px;">Message me for a <b>free consultation</b> or to see if we're a good fit.</div>
+          <div class="contact-links" style="margin-top: 14px;">
+            <a href="mailto:ulises.roennau@gmail.com" title="Email"><i class="fa-solid fa-paper-plane"></i></a>
+            <a href="tel:+17048846814" title="Call or Text"><i class="fa-solid fa-square-phone-flip"></i></a>
+            <a href="https://www.linkedin.com/in/ulises-roennau-a32b432b2" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Spotlight Section -->
+        <div class="spotlight-card">
+          <div class="spotlight-text">
+            <div class="splight-title">Featured Project: Victorian Simplicity</div>
+            A handcrafted visual homage to Victorian design principles—featuring subtle textures,
+            balanced typography, and graceful simplicity.<br><br>
+            <a href="https://sites.google.com/view/victoriansimplicity/home" target="_blank">Explore the live site →</a>
+          </div>
+          <div class="spotlight-image">
+            <a href="https://sites.google.com/view/victoriansimplicity/home" target="_blank">
+              <img src="../images/victorian_simplicity_for_index.png" alt="Victorian Simplicity Screenshot"/>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OTHER SERVICES -->
+<div id="services" class="section-spacer">
+  <div class="container">
+    <div class="other-services-title"><i class="fa-solid fa-briefcase"></i> Other Services</div>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-chart-line"></i>
+        <h2>Time Series Analysis</h2>
+        <p>Forecasting, ML models, and dashboards to make sense of your time-based data.</p>
+        <a href="time_series_analysis.html" class="learn-more-link">Learn more</a>
+      </div>
+      <div>
+        <i class="fa-solid fa-square-root-variable"></i>
+        <h2>Mathematics Tutor</h2>
+        <p>Support for high school & college students learning math, stats, and logic.</p>
+        <a href="mathematics_tutor.html" class="learn-more-link">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<div id="contact" class="section-spacer">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><a href="mailto:ulises.roennau@gmail.com" class="contact-icon-link"><i class="fa-solid fa-paper-plane"></i></a> ulises.roennau@gmail.com</p>
+        <p><a href="tel:+17048846814" class="contact-icon-link"><i class="fa-solid fa-square-phone-flip"></i></a> +1 (704) 884-6814</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/ulises-roennau-a32b432b2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <a href="../images/UlisesRonnau_Multilingual_ML_Engineer.pdf" download class="btn btn 2" style="margin-top:32px;">Download CV</a>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required />
+          <input type="email" name="Email" placeholder="Your Email" required />
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+  <div id="footer-include"></div>
+</div>
+
+<!-- JS Includes -->
 <script>
-  // Load Navbar (for services pages)
   fetch('../includes/navbar-services.html')
     .then(res => res.text())
     .then(html => { document.getElementById('navbar-include').innerHTML = html; });
 
-  // Load Footer
   fetch('../includes/footer.html')
     .then(res => res.text())
     .then(html => { document.getElementById('footer-include').innerHTML = html; });
 </script>
-
 <script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right = "0"
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px"
-    }
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwLvogkWDBAVz86Jmf25BrbsRbehx1-6G4yNt-oSQXPt8JnPn_f1p6RnBePPpZjJqEB/exec';
+  const form = document.forms['submit-to-google-sheet'];
+  const msg = document.getElementById("msg");
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully";
+        setTimeout(() => { msg.innerHTML = "" }, 5000);
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message));
+  });
 </script>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwLvogkWDBAVz86Jmf25BrbsRbehx1-6G4yNt-oSQXPt8JnPn_f1p6RnBePPpZjJqEB/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-</script>
-
 </body>
 </html>
