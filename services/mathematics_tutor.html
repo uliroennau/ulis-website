@@ -157,22 +157,19 @@
 
 <!-- Load Navbar and Footer -->
 <script>
+  // Load Navbar
   fetch('../includes/navbar-services.html')
     .then(res => res.text())
-    .then(html => { document.getElementById('navbar-include').innerHTML = html; });
-
-  fetch('../includes/footer.html')
-    .then(res => res.text())
-    .then(html => { document.getElementById('footer-include').innerHTML = html; });
-</script>
-<script>
-  var sidemenu = document.getElementById("sidemenu");
-  function openmenu() {
-    sidemenu.style.right = "0"
-  }
-  function closemenu() {
-    sidemenu.style.right = "-200px"
-  }
+    .then(html => {
+      document.getElementById('navbar-include').innerHTML = html;
+      // ✅ Re-attach menu functions after navbar is loaded
+      window.openmenu = function () {
+        document.getElementById("sidemenu").style.right = "0";
+      }
+      window.closemenu = function () {
+        document.getElementById("sidemenu").style.right = "-200px";
+      }
+    });
 </script>
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwLvogkWDBAVz86Jmf25BrbsRbehx1-6G4yNt-oSQXPt8JnPn_f1p6RnBePPpZjJqEB/exec'

@@ -146,12 +146,16 @@
   // Load Navbar
   fetch('includes/navbar.html')
     .then(res => res.text())
-    .then(html => { document.getElementById('navbar-include').innerHTML = html; });
-
-  // Load Footer
-  fetch('includes/footer.html')
-    .then(res => res.text())
-    .then(html => { document.getElementById('footer-include').innerHTML = html; });
+    .then(html => {
+      document.getElementById('navbar-include').innerHTML = html;
+      // ✅ Re-attach menu functions after navbar is loaded
+      window.openmenu = function () {
+        document.getElementById("sidemenu").style.right = "0";
+      }
+      window.closemenu = function () {
+        document.getElementById("sidemenu").style.right = "-200px";
+      }
+    });
 </script>
 
 <script>
@@ -202,16 +206,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         event.currentTarget.classList.add("active-link")
         document.getElementById(tabname).classList.add("active-tab")
-    }
-</script>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right = "0"
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px"
     }
 </script>
 
