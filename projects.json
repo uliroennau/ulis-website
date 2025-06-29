@@ -3,7 +3,7 @@
     "title": "Diabetes Self-Test",
     "description": "A user-friendly web application that predicts the likelihood of diabetes based on personal medical information, providing quick and accessible results.",
     "image": "images/diabetes_self_test_for_index.png",
-    "link": "projects/diabetes_self_test.html"
+    "link": "https://diabetes-self-test.streamlit.app/"
   },
   {
     "title": "TextScape",
