@@ -10,7 +10,7 @@ html{
 body{
     background: #080808;
     color: #fff;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 #header{
     width: 100%;
@@ -84,9 +84,15 @@ h1{
     color: #fff;
 }
 .information-col-2 h2 {
-    color: #fff;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    color: #7BAFD4;
+    font-size: 20px;
+    margin-top: 28px;
+    margin-bottom: 8px;
+}
+.information-col-2 p {
+    color: #ababab;
+    font-size: 16px;
+    line-height: 1.75;
 }
 #portfolio{
     padding: 50px 0;

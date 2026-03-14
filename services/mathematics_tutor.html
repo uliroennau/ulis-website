@@ -8,90 +8,60 @@
   <link rel="stylesheet" href="../css/services_style.css" />
   <link rel="icon" type="image/png" href="../favicon.png" />
   <script src="https://kit.fontawesome.com/4370b8b097.js" crossorigin="anonymous"></script>
-  <style>
-    /* Responsive two-column layout for tutor page */
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
-    }
-    .information-col-1,
-    .information-col-2 {
-      flex: 1;
-      min-width: 280px;
-    }
-    .information-col-1 img {
-      width: 100%;
-      max-width: 350px;
-      border-radius: 16px;
-      display: block;
-      margin: 0 auto;
-    }
-    @media (max-width: 900px) {
-      .row {
-        flex-direction: column;
-        align-items: center;
-      }
-      .information-col-1 img {
-        max-width: 95vw;
-        margin-bottom: 22px;
-      }
-    }
-    #information {
-      margin-top: 0 !important;
-    }
-    @media (max-width: 900px) {
-    .information-col-1 img {
-        max-width: 350px;
-    }
-    }
-  </style>
 </head>
 <body>
+
 <div id="header">
   <div class="container">
     <div id="navbar-include"></div>
   </div>
 </div>
 
-<!-- Main Tutoring Info Card with responsive image -->
+<!-- Service Hero -->
+<div class="service-hero">
+  <div class="container service-hero-inner">
+    <div class="service-hero-text">
+      <div class="service-hero-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+      <h1 class="service-hero-title">Mathematics Tutor</h1>
+      <p class="service-tagline">Personalized, step-by-step instruction for high school and college students. I focus on building genuine mathematical intuition, not just drilling procedures.</p>
+      <a href="#contact" class="service-cta-btn">Book a Free Session</a>
+    </div>
+    <div class="service-hero-image">
+      <img src="../images/mathematics_tutoring.png" alt="Mathematics Tutoring" />
+    </div>
+  </div>
+</div>
+
+<!-- Service Details Card -->
 <div id="information" class="section-spacer">
   <div class="container">
-    <div class="row">
-      <div class="information-col-1">
-        <img src="../images/mathematics_tutoring.png" alt="Ulises Rönnau" />
+    <div class="tutor-card">
+      <div class="tutor-info-grid">
+        <div><i class="fa-solid fa-book-open"></i> <span class="label">Subjects:</span></div>
+        <div>Algebra, Geometry, Precalculus, Calculus, AP/IB Math, Statistics, Linear Algebra, and more</div>
+        <div><i class="fa-solid fa-user-graduate"></i> <span class="label">Who:</span></div>
+        <div>High school &amp; undergraduate students (all backgrounds welcome!)</div>
+        <div><i class="fa-regular fa-lightbulb"></i> <span class="label">How:</span></div>
+        <div>Step-by-step explanations, clear examples, plenty of patience, and a focus on real understanding</div>
+        <div><i class="fa-solid fa-location-dot"></i> <span class="label">Where:</span></div>
+        <div>Online (Zoom) or in-person in Chapel Hill</div>
+        <div><i class="fa-regular fa-clock"></i> <span class="label">When:</span></div>
+        <div>Flexible scheduling — evenings &amp; weekends available</div>
       </div>
-      <div class="information-col-2">
-        <div class="tutor-card">
-          <h2><i class="fa-solid fa-square-root-variable"></i> Mathematics Tutor</h2>
-          <div class="tutor-info-grid">
-            <div><i class="fa-solid fa-book-open"></i> <span class="label">Subjects:</span></div>
-            <div>Algebra, Geometry, Precalculus, Calculus, AP/IB Math, Statistics, Linear Algebra, and more</div>
-            <div><i class="fa-solid fa-user-graduate"></i> <span class="label">Who:</span></div>
-            <div>High school & undergraduate students (all backgrounds welcome!)</div>
-            <div><i class="fa-regular fa-lightbulb"></i> <span class="label">How:</span></div>
-            <div>Step-by-step explanations, clear examples, plenty of patience, and a focus on real understanding</div>
-            <div><i class="fa-solid fa-location-dot"></i> <span class="label">Where:</span></div>
-            <div>Online (Zoom) or in-person in Chapel Hill</div>
-            <div><i class="fa-regular fa-clock"></i> <span class="label">When:</span></div>
-            <div>Flexible scheduling — evenings & weekends available</div>
-          </div>
-          <div class="divider"></div>
-          <div class="rates"><i class="fa-solid fa-coins"></i> $30/hour &middot; Discounted packages available</div>
-          <div class="divider"></div>
-          <div style="margin-top: 10px; font-size: 16px;">Reach out for a <b>free consultation</b> or to ask any questions.</div>
-          <div class="contact-links" style="margin-top: 14px;">
-            <a href="mailto:ulises.roennau@gmail.com" title="Email"><i class="fa-solid fa-paper-plane"></i></a>
-            <a href="tel:+17048846814" title="Call or Text"><i class="fa-solid fa-square-phone-flip"></i></a>
-            <a href="https://www.linkedin.com/in/ulises-roennau-a32b432b2" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-          </div>
-        </div>
+      <div class="divider"></div>
+      <div class="rates"><i class="fa-solid fa-coins"></i> $30/hour &middot; Discounted packages available</div>
+      <div class="divider"></div>
+      <div style="font-size: 16px; margin-bottom: 4px;">Reach out for a <b>free consultation</b> or to ask any questions.</div>
+      <div class="contact-links">
+        <a href="mailto:ulises.roennau@gmail.com"><i class="fa-solid fa-paper-plane"></i> Email Me</a>
+        <a href="tel:+17048846814"><i class="fa-solid fa-square-phone-flip"></i> Call / Text</a>
+        <a href="https://www.linkedin.com/in/ulises-roennau-a32b432b2" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Other Services Section -->
+<!-- Other Services -->
 <div id="services" class="section-spacer">
   <div class="container">
     <div class="other-services-title"><i class="fa-solid fa-briefcase"></i> Other Services</div>
@@ -99,19 +69,13 @@
       <div>
         <i class="fa-solid fa-chart-line"></i>
         <h2>Time Series Analysis</h2>
-        <p>
-          Advanced analytics using Python and machine learning.<br>
-          Accurate forecasting for sales, demand, or KPIs tailored to your business data.
-        </p>
+        <p>Advanced analytics using Python and machine learning. Accurate forecasting for sales, demand, or KPIs tailored to your business data.</p>
         <a href="time_series_analysis.html" class="learn-more-link">Learn more</a>
       </div>
       <div>
         <i class="fa-solid fa-laptop-code"></i>
         <h2>Custom Websites</h2>
-        <p>
-          Modern, affordable websites for students and professionals.<br>
-          Personal portfolios, resumes, or business pages—mobile ready and fast.
-        </p>
+        <p>Modern, affordable websites for students and professionals. Personal portfolios, resumes, or business pages—mobile ready and fast.</p>
         <a href="custom_websites.html" class="learn-more-link">Learn more</a>
       </div>
     </div>
@@ -139,7 +103,7 @@
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/ulises-roennau-a32b432b2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </div>
-        <a href="../images/UlisesRonnau_Multilingual_ML_Engineer.pdf" download class="btn btn 2" style="margin-top:32px;">Download CV</a>
+        <a href="../images/UlisesRonnau_Multilingual_ML_Engineer.pdf" download class="btn btn2" style="margin-top:32px;">Download CV</a>
       </div>
       <div class="contact-right">
         <form name="submit-to-google-sheet">
@@ -153,24 +117,17 @@
     </div>
   </div>
   <div class="copyright">
-      <p>Copyright 2025 © Ulises.</p>
+    <p>Copyright 2026 © Ulises Rönnau.</p>
   </div>
 </div>
 
-<!-- Load Navbar and Footer -->
 <script>
-  // Load Navbar
   fetch('../includes/navbar-services.html')
     .then(res => res.text())
     .then(html => {
       document.getElementById('navbar-include').innerHTML = html;
-      // ✅ Re-attach menu functions after navbar is loaded
-      window.openmenu = function () {
-        document.getElementById("sidemenu").style.right = "0";
-      }
-      window.closemenu = function () {
-        document.getElementById("sidemenu").style.right = "-200px";
-      }
+      window.openmenu = function () { document.getElementById("sidemenu").style.right = "0"; }
+      window.closemenu = function () { document.getElementById("sidemenu").style.right = "-200px"; }
     });
 </script>
 <script>

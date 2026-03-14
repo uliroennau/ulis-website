@@ -8,132 +8,69 @@
     <link rel="stylesheet" href="../css/services_style.css">
     <link rel="icon" type="image/png" href="../favicon.png">
     <script src="https://kit.fontawesome.com/4370b8b097.js" crossorigin="anonymous"></script>
-    <style>
-    /* ---- Splight Spotlight Card ---- */
-    .spotlight-card {
-      background: #232c36;
-      color: #fff;
-      border-radius: 14px;
-      box-shadow: 0 1px 10px 0 rgba(123,175,212,0.13);
-      padding: 32px 36px;
-      margin: 34px auto 0 auto;
-      max-width: 670px;   /* Match .tutor-card max-width */
-      font-size: 18px;
-      display: flex;
-      align-items: flex-start;
-      gap: 22px;
-    }
-    .spotlight-card i {
-      font-size: 36px;
-      color: #7BAFD4;
-      margin-right: 10px;
-      margin-top: 2px;
-    }
-    .spotlight-card .splight-title {
-      font-weight: 600;
-      color: #7BAFD4;
-      margin-bottom: 10px;
-      letter-spacing: 0.3px;
-      font-size: 19px;
-    }
-    @media (max-width: 900px) {
-      .row {
-        flex-direction: column;
-        align-items: center;
-      }
-      .information-col-1,
-      .information-col-2 {
-        flex-basis: 100%;
-        max-width: 100%;
-        margin: 0 0 28px 0;
-      }
-      .spotlight-card {
-        font-size: 15px;
-        padding: 18px 4vw;
-        max-width: 98vw;
-      }
-      .spotlight-card i {
-        font-size: 27px;
-      }
-    }
-    .information-col-1 img {
-      width: 100%;
-      max-width: 350px;
-      border-radius: 16px;
-      display: block;
-      margin: 0 auto;
-    }
-    /* Remove any negative margin from #information */
-    #information {
-      margin-top: 0 !important;
-    }
-    </style>
 </head>
 <body>
+
 <div id="header">
     <div class="container">
         <div id="navbar-include"></div>
     </div>
 </div>
 
-<!-- Main Time Series Service Card -->
+<!-- Service Hero -->
+<div class="service-hero">
+    <div class="container service-hero-inner">
+        <div class="service-hero-text">
+            <div class="service-hero-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h1 class="service-hero-title">Time Series Analysis</h1>
+            <p class="service-tagline">From forecasting and anomaly detection to real-time dashboards and business intelligence — I turn your sequential data into clear, actionable insights.</p>
+            <a href="#contact" class="service-cta-btn">Get a Free Consultation</a>
+        </div>
+        <div class="service-hero-image">
+            <img src="../images/time_series_analysis.png" alt="Time Series Analysis">
+        </div>
+    </div>
+</div>
+
+<!-- Service Details Card -->
 <div id="information" class="section-spacer">
     <div class="container">
-        <div class="row">
-            <div class="information-col-1">
-                <img src="../images/time_series_analysis.png" alt="Ulises Rönnau">
+        <div class="tutor-card">
+            <div class="tutor-info-grid">
+                <div><i class="fa-solid fa-bolt"></i> <span class="label">Focus:</span></div>
+                <div>Forecasting, anomaly detection, signal extraction, KPIs, performance monitoring, and business intelligence across finance, operations, health, marketing, and more</div>
+                <div><i class="fa-solid fa-brain"></i> <span class="label">Techniques:</span></div>
+                <div>Python (pandas, scikit-learn, statsmodels), machine learning, custom feature engineering, model evaluation, and time series decomposition (trend, seasonality, etc.)</div>
+                <div><i class="fa-solid fa-gears"></i> <span class="label">Deliverables:</span></div>
+                <div>Interactive dashboards, clear reports, reproducible code, API/data pipeline integration, and actionable insights tailored to your data</div>
+                <div><i class="fa-solid fa-handshake"></i> <span class="label">Who:</span></div>
+                <div>Businesses, researchers, students, and teams seeking to extract real value and understanding from time series and sequential data</div>
+                <div><i class="fa-solid fa-location-dot"></i> <span class="label">Where:</span></div>
+                <div>Remote/online collaboration worldwide, with transparent updates and secure data handling</div>
             </div>
-            <div class="information-col-2">
-                <div class="tutor-card">
-                    <h2>
-                        <i class="fa-solid fa-chart-line" style="font-size:1.4em;vertical-align:-4px;"></i> Time Series Analysis
-                    </h2>
-                    <div class="tutor-info-grid">
-                        <div><i class="fa-solid fa-bolt"></i> <span class="label">Focus:</span></div>
-                        <div>
-                            Forecasting, anomaly detection, signal extraction, KPIs, performance monitoring, and business intelligence across finance, operations, health, marketing, and more
-                        </div>
-                        <div><i class="fa-solid fa-brain"></i> <span class="label">Techniques:</span></div>
-                        <div>
-                            Python (pandas, scikit-learn, statsmodels), machine learning, custom feature engineering, model evaluation, and time series decomposition (trend, seasonality, etc.)
-                        </div>
-                        <div><i class="fa-solid fa-gears"></i> <span class="label">Deliverables:</span></div>
-                        <div>
-                            Interactive dashboards, clear reports, reproducible code, API/data pipeline integration, and actionable insights tailored to your data
-                        </div>
-                        <div><i class="fa-solid fa-handshake"></i> <span class="label">Who:</span></div>
-                        <div>
-                            Businesses, researchers, students, and teams seeking to extract real value and understanding from time series and sequential data
-                        </div>
-                        <div><i class="fa-solid fa-location-dot"></i> <span class="label">Where:</span></div>
-                        <div>
-                            Remote/online collaboration worldwide, with transparent updates and secure data handling
-                        </div>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="rates"><i class="fa-solid fa-coins"></i> Custom pricing &middot; Hourly/project rates available</div>
-                    <div class="divider"></div>
-                    <div style="margin-top: 10px; font-size: 16px;">Get in touch for a <b>free consultation</b> or to discuss your analytics project!</div>
-                    <div class="contact-links" style="margin-top: 14px;">
-                        <a href="mailto:ulises.roennau@gmail.com" title="Email"><i class="fa-solid fa-paper-plane"></i></a>
-                        <a href="tel:+17048846814" title="Call or Text"><i class="fa-solid fa-square-phone-flip"></i></a>
-                        <a href="https://www.linkedin.com/in/ulises-roennau-a32b432b2" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <!-- Splight Spotlight -->
-                <div class="spotlight-card">
-                    <i class="fa-solid fa-plug-circle-bolt"></i>
-                    <div>
-                        <div class="splight-title">Spotlight: Energy Data Analysis at Splight</div>
-                        At Splight, I developed tools to analyze and forecast grid congestion, leverage locational marginal pricing (LMP), and create real-time dashboards for energy transmission line analytics—demonstrating expertise in high-impact, operational time series solutions for the energy industry.
-                    </div>
-                </div>
+            <div class="divider"></div>
+            <div class="rates"><i class="fa-solid fa-coins"></i> Custom pricing &middot; Hourly/project rates available</div>
+            <div class="divider"></div>
+            <div style="font-size: 16px; margin-bottom: 4px;">Get in touch for a <b>free consultation</b> or to discuss your analytics project.</div>
+            <div class="contact-links">
+                <a href="mailto:ulises.roennau@gmail.com"><i class="fa-solid fa-paper-plane"></i> Email Me</a>
+                <a href="tel:+17048846814"><i class="fa-solid fa-square-phone-flip"></i> Call / Text</a>
+                <a href="https://www.linkedin.com/in/ulises-roennau-a32b432b2" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+
+        <!-- Spotlight: Splight -->
+        <div class="spotlight-card">
+            <i class="fa-solid fa-plug-circle-bolt"></i>
+            <div>
+                <div class="splight-title">Spotlight: Energy Data Analysis at Splight</div>
+                At Splight, I developed tools to analyze and forecast grid congestion, leverage locational marginal pricing (LMP), and create real-time dashboards for energy transmission line analytics—demonstrating expertise in high-impact, operational time series solutions for the energy industry.
             </div>
         </div>
     </div>
 </div>
 
-<!-- Other Services Section -->
+<!-- Other Services -->
 <div id="services" class="section-spacer">
     <div class="container">
         <div class="other-services-title"><i class="fa-solid fa-briefcase"></i> Other Services</div>
@@ -141,26 +78,20 @@
             <div>
                 <i class="fa-solid fa-square-root-variable"></i>
                 <h2>Mathematics Tutor</h2>
-                <p>
-                    Personalized, step-by-step math instruction for high school and college students.<br>
-                    Focus on understanding, problem-solving, and building confidence.
-                </p>
+                <p>Personalized, step-by-step math instruction for high school and college students. Focus on understanding, problem-solving, and building confidence.</p>
                 <a href="mathematics_tutor.html" class="learn-more-link">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-laptop-code"></i>
                 <h2>Custom Websites</h2>
-                <p>
-                    Modern, affordable websites for students and professionals.<br>
-                    Personal portfolios, resumes, or business pages—mobile ready and fast.
-                </p>
+                <p>Modern, affordable websites for students and professionals. Personal portfolios, resumes, or business pages—mobile ready and fast.</p>
                 <a href="custom_websites.html" class="learn-more-link">Learn more</a>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Contact Form and CV Download -->
+<!-- Contact Section -->
 <div id="contact" class="section-spacer">
     <div class="container">
         <div class="row">
@@ -181,7 +112,7 @@
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/ulises-roennau-a32b432b2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <a href="../images/UlisesRonnau_Multilingual_ML_Engineer.pdf" download class="btn btn 2" style="margin-top:32px;">Download CV</a>
+                <a href="../images/UlisesRonnau_Multilingual_ML_Engineer.pdf" download class="btn btn2" style="margin-top:32px;">Download CV</a>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
@@ -199,20 +130,13 @@
     </div>
 </div>
 
-<!-- SCRIPTS AT THE END -->
 <script>
-  // Load Navbar
   fetch('../includes/navbar-services.html')
     .then(res => res.text())
     .then(html => {
       document.getElementById('navbar-include').innerHTML = html;
-      // ✅ Re-attach menu functions after navbar is loaded
-      window.openmenu = function () {
-        document.getElementById("sidemenu").style.right = "0";
-      }
-      window.closemenu = function () {
-        document.getElementById("sidemenu").style.right = "-200px";
-      }
+      window.openmenu = function () { document.getElementById("sidemenu").style.right = "0"; }
+      window.closemenu = function () { document.getElementById("sidemenu").style.right = "-200px"; }
     });
 </script>
 <script>
@@ -224,9 +148,7 @@
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
             msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
+            setTimeout(function(){ msg.innerHTML = "" }, 5000)
             form.reset()
         })
         .catch(error => console.error('Error!', error.message))

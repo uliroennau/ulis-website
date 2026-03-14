@@ -1,19 +1,19 @@
 [
   {
     "title": "Diabetes Self-Test",
-    "description": "A user-friendly web application that predicts the likelihood of diabetes based on personal medical information, providing quick and accessible results.",
+    "description": "A machine learning web application that predicts diabetes risk from clinical features using a Support Vector Machine trained on patient data, with 78% accuracy on held-out test samples.",
     "image": "images/diabetes_self_test_for_index.png",
     "link": "https://diabetes-self-test.streamlit.app/"
   },
   {
     "title": "TextScape",
-    "description": "TextScape displays a 3D map of text chunks based on their semantic similarity—use the filters and search to explore related content, and click any point to view or download the underlying text.",
+    "description": "An interactive 3D visualization tool that maps documents by semantic similarity using embedding models, enabling spatial exploration of conceptual relationships across large text corpora.",
     "image": "images/textscape_icon_for_index.png",
     "link": "https://textscapemaps.netlify.app/"
   },
   {
     "title": "Victorian Simplicity",
-    "description": "Victorian Simplicity is an exhibition website designed to capture and display a counter-narrative of the Victorian Era, namely that it was a simple time.",
+    "description": "An exhibition website presenting a counter-narrative of the Victorian Era — exploring the argument that, beneath its ornate surface, the period embodied a fundamental simplicity.",
     "image": "images/victorian_simplicity_for_index.png",
     "link": "https://sites.google.com/view/victoriansimplicity/home"
   }

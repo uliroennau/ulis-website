@@ -1,183 +1,390 @@
-/* ====== Mathematics Tutor & Services Unique Styles ====== */
+/* ====== Services Pages – Shared Styles ====== */
 
+/* ---- Section Spacing ---- */
 .section-spacer {
-  margin-top: 54px;
-  margin-bottom: 36px;
+  margin-top: 44px;
+  margin-bottom: 18px;
 }
 @media (max-width: 800px) {
   .section-spacer {
-    margin-top: 36px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 12px;
   }
 }
 
-/* Tutor Card Styles */
+/* Tighten gap directly after the hero */
+.service-hero + .section-spacer {
+  margin-top: 20px;
+}
+
+/* ====================================================
+   SERVICE HERO SECTION
+   ==================================================== */
+.service-hero {
+  border-top: 3px solid #7BAFD4;
+  background: #1a1a1a;
+  padding: 56px 0 24px 0;
+}
+.service-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+}
+.service-hero-text {
+  flex: 1;
+  min-width: 0;
+}
+.service-hero-icon {
+  color: #7BAFD4;
+  font-size: 40px;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+.service-hero-title,
+.service-hero .service-hero-title {
+  color: #fff !important;
+  font-size: 52px !important;
+  font-weight: 700 !important;
+  line-height: 1.12 !important;
+  margin: 0 0 16px 0 !important;
+  letter-spacing: 0.3px;
+  text-transform: none !important;
+}
+.service-tagline {
+  color: #ababab;
+  font-size: 19px;
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 34px;
+}
+.service-cta-btn {
+  display: inline-block;
+  background: #7BAFD4;
+  color: #fff !important;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none !important;
+  letter-spacing: 0.3px;
+  transition: background 0.2s, transform 0.15s;
+}
+.service-cta-btn:hover {
+  background: #5a94b8;
+  transform: translateY(-2px);
+}
+.service-hero-image {
+  flex: 0 0 290px;
+  max-width: 290px;
+}
+.service-hero-image img {
+  width: 100%;
+  border-radius: 18px;
+  display: block;
+}
+@media (max-width: 860px) {
+  .service-hero {
+    padding: 42px 0 38px 0;
+  }
+  .service-hero-inner {
+    flex-direction: column-reverse;
+    gap: 26px;
+    align-items: center;
+    text-align: center;
+  }
+  .service-hero-image {
+    flex: 0 0 auto;
+    max-width: 200px;
+  }
+  .service-hero-title,
+  .service-hero .service-hero-title {
+    font-size: 34px !important;
+  }
+  .service-tagline {
+    font-size: 16px;
+    margin-bottom: 24px;
+    max-width: 100%;
+  }
+  .service-cta-btn {
+    font-size: 15px;
+    padding: 12px 26px;
+  }
+}
+
+/* ====================================================
+   SERVICE DETAIL CARD
+   ==================================================== */
 .tutor-card {
   background: #262626;
   border-radius: 14px;
-  padding: 40px 36px 30px 36px;
-  box-shadow: 0 4px 20px 0 rgba(123,175,212,0.09);
+  padding: 40px 44px 34px 44px;
+  box-shadow: 0 4px 24px 0 rgba(123,175,212,0.09);
   color: #ababab;
-  max-width: 670px;
+  max-width: 800px;
   margin: 0 auto;
   font-size: 18px;
 }
 .tutor-card h2 {
   color: #fff;
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 600;
-  margin-bottom: 18px;
-  letter-spacing: 0.5px;
+  margin-bottom: 22px;
+  letter-spacing: 0.4px;
   display: flex;
   align-items: center;
-  gap: 16px;
-}
-.tutor-card h2 .fa-square-root-variable {
-  font-size: 1.35em;      /* Adjust this to fit exactly; try 1.35em–1.5em */
-  margin-right: 10px;
-  vertical-align: -4px;   /* Slight downward nudge if needed */
+  gap: 14px;
 }
 .tutor-card h2 i {
-  color: #fff !important;
+  color: #7BAFD4 !important;
+  font-size: 0.9em;
 }
 .tutor-card .rates {
-  background: #080808;
+  background: #1a1a1a;
   color: #fff;
-  display: inline-block;
-  padding: 8px 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
   border-radius: 6px;
-  font-size: 18px;
+  border-left: 3px solid #7BAFD4;
+  font-size: 17px;
   font-weight: 500;
-  margin: 16px 0 12px 0;
-  letter-spacing: 1px;
+  margin: 14px 0 12px 0;
+  letter-spacing: 0.5px;
+}
+.tutor-card .rates i {
+  color: #7BAFD4;
 }
 .tutor-card .divider {
-  border-top: 1px solid #444;
-  margin: 22px 0 22px 0;
+  border-top: 1px solid #383838;
+  margin: 22px 0;
 }
 .tutor-card .contact-links {
-  margin-top: 12px;
-  font-size: 23px;
+  margin-top: 16px;
   display: flex;
-  gap: 26px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 .tutor-card .contact-links a {
-  color: #7BAFD4;
-  text-decoration: none;
-  font-weight: 500;
-  margin-right: 0;
-  transition: color 0.2s;
-  padding: 7px 0;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  gap: 8px;
+  color: #e0e0e0;
+  background: #2e2e2e;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 9px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 .tutor-card .contact-links a:hover {
-  color: #6198b5;
+  background: #7BAFD4;
+  border-color: #7BAFD4;
+  color: #fff;
+}
+.tutor-card .contact-links a i {
+  font-size: 15px;
+  color: inherit;
 }
 @media (max-width: 700px) {
   .tutor-card {
-    padding: 16px 4vw 16px 4vw;
+    padding: 24px 5vw;
     font-size: 15px;
   }
   .tutor-card h2 {
-    font-size: 28px;
+    font-size: 26px;
+    margin-bottom: 16px;
   }
   .tutor-card .rates {
-    font-size: 15px;
+    font-size: 14px;
+    padding: 8px 16px;
   }
   .tutor-card .contact-links {
-    font-size: 19px;
+    gap: 8px;
+  }
+  .tutor-card .contact-links a {
+    font-size: 14px;
+    padding: 8px 14px;
   }
 }
 
-/* Info Grid for clean label alignment */
+/* ====================================================
+   INFO GRID
+   ==================================================== */
 .tutor-info-grid {
   display: grid;
   grid-template-columns: max-content 1fr;
-  row-gap: 11px;
-  column-gap: 16px;
-  margin: 0 0 22px 0;
-  font-size: 18px;
+  row-gap: 14px;
+  column-gap: 18px;
+  margin: 0 0 24px 0;
+  font-size: 17px;
   align-items: flex-start;
 }
 .tutor-info-grid .label {
-  font-weight: 600;
+  font-weight: 700;
+  color: #d8d8d8;
   margin-left: 7px;
 }
 .tutor-info-grid i {
   color: #7BAFD4;
-  font-size: 20px;
-  min-width: 26px;
+  font-size: 17px;
+  min-width: 20px;
 }
 @media (max-width: 700px) {
   .tutor-info-grid {
     font-size: 15px;
+    row-gap: 11px;
   }
 }
 
-/* Other Services Heading */
+/* ====================================================
+   SPOTLIGHT CARD
+   ==================================================== */
+.spotlight-card {
+  background: #1e2530;
+  color: #ccc;
+  border-radius: 14px;
+  border-left: 3px solid #7BAFD4;
+  box-shadow: 0 2px 14px 0 rgba(123,175,212,0.10);
+  padding: 28px 34px;
+  margin: 22px auto 0 auto;
+  max-width: 800px;
+  font-size: 17px;
+  line-height: 1.65;
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+.spotlight-card > i {
+  font-size: 30px;
+  color: #7BAFD4;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.spotlight-card .splight-title {
+  font-weight: 600;
+  color: #7BAFD4;
+  margin-bottom: 9px;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+}
+.spotlight-text {
+  flex: 1 1 280px;
+}
+.spotlight-image {
+  flex: 0 1 175px;
+  max-width: 175px;
+}
+.spotlight-image img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+.spotlight-card a {
+  color: #7BAFD4;
+  text-decoration: underline;
+}
+.spotlight-card a:hover {
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .spotlight-card {
+    flex-direction: column;
+    padding: 20px 5vw;
+    font-size: 15px;
+    gap: 14px;
+  }
+  .spotlight-image {
+    max-width: 160px;
+    margin: 0 auto;
+  }
+}
+
+/* ====================================================
+   OTHER SERVICES SECTION
+   ==================================================== */
 .other-services-title {
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 36px;
-  font-size: 36px;
+  margin: 0 0 36px 0;
+  font-size: 32px;
   font-weight: 600;
   color: #fff;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
 }
 .other-services-title i {
-  color: #fff !important;
-  font-size: 30px;
+  color: #7BAFD4 !important;
+  font-size: 26px;
 }
-
-/* Other Services Card Styles */
 .services-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 40px;
+  gap: 28px;
 }
-.services-list div {
+.services-list > div {
   background: #262626 !important;
-  color: #fff;
-  border-radius: 10px;
-  padding: 40px;
-  font-size: 13px;
+  color: #ccc;
+  border-radius: 12px;
+  padding: 36px 32px 30px 32px;
+  font-size: 15px;
   font-weight: 300;
+  line-height: 1.6;
   box-shadow: 0 2px 10px 0 rgba(123,175,212,0.06);
-  transition: background 0.5s, transform 0.5s, color 0.5s;
+  transition: background 0.3s, transform 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: column;
 }
-.services-list div h2,
-.services-list div i {
+.services-list > div i {
+  color: #7BAFD4;
+  font-size: 30px;
+  margin-bottom: 14px;
+  display: block;
+}
+.services-list > div h2 {
   color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
-.services-list div:hover {
+.services-list > div p {
+  flex: 1;
+  margin-bottom: 0;
+}
+.services-list > div:hover {
   background: #7BAFD4 !important;
   color: #fff !important;
+  transform: translateY(-4px);
 }
-.services-list div:hover h2,
-.services-list div:hover i {
+.services-list > div:hover h2,
+.services-list > div:hover i,
+.services-list > div:hover .learn-more-link {
   color: #fff !important;
 }
 
-/* Learn More Link (text only, not a button) */
+/* Learn More Link */
 .learn-more-link {
-  color: #ababab;
+  color: #7BAFD4;
   text-decoration: none;
-  background: none;
-  border: none;
-  padding: 0;
   font-size: 14px;
-  margin-top: 20px;
-  display: inline-block;
+  font-weight: 600;
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   cursor: pointer;
-  transition: none;
+  letter-spacing: 0.2px;
+  transition: color 0.2s, gap 0.2s;
+}
+.learn-more-link::after {
+  content: '→';
 }
 .learn-more-link:hover {
-  color: #ababab;
+  color: #fff;
+  gap: 9px;
   text-decoration: none;
 }
