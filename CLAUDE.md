@@ -8,7 +8,7 @@ Static portfolio website for Ulises Rönnau, hosted on GitHub Pages at `ulisesro
 
 ## Development
 
-Since this is a static site, open `index.html` directly in a browser or use a local server:
+Opening `index.html` directly via `file://` will break the fetch-based includes. Use a local server:
 
 ```bash
 # Simple local server (Python)

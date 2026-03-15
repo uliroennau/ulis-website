@@ -1,5 +1,11 @@
 [
   {
+    "title": "NT Intertextuality Detector",
+    "description": "A semantic search tool that surfaces Old Testament quotations, allusions, and echoes within the book of Romans using sentence-transformer embeddings and FAISS vector similarity search.",
+    "image": "images/nt_intertextuality_detector.png",
+    "link": "https://romans-intertextuality-detector.onrender.com/"
+  },
+  {
     "title": "Diabetes Self-Test",
     "description": "A machine learning web application that predicts diabetes risk from clinical features using a Support Vector Machine trained on patient data, with 78% accuracy on held-out test samples.",
     "image": "images/diabetes_self_test_for_index.png",
