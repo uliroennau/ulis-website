@@ -1,5 +1,16 @@
 /* ====== Services Pages – Shared Styles ====== */
 
+/* Always show nav background on service pages (logo PNG has dark bg that clashes with #1a1a1a hero) */
+#nav-wrapper {
+  background: rgba(8, 8, 8, 0.96) !important;
+  border-bottom: 1px solid rgba(123, 175, 212, 0.15) !important;
+}
+
+/* Offset anchor scroll targets to account for fixed nav */
+#information, #services, #contact {
+  scroll-margin-top: 68px;
+}
+
 /* ---- Section Spacing ---- */
 .section-spacer {
   margin-top: 44px;
@@ -14,7 +25,12 @@
 
 /* Tighten gap directly after the hero */
 .service-hero + .section-spacer {
-  margin-top: 20px;
+  margin-top: 0;
+}
+/* Override style.css padding on information section for service pages */
+#information.section-spacer {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 /* ====================================================
@@ -23,11 +39,11 @@
 .service-hero {
   border-top: 3px solid #7BAFD4;
   background: #1a1a1a;
-  padding: 56px 0 24px 0;
+  padding: 120px 0 60px 0; /* 120px top clears 95px fixed nav + breathing room */
 }
 .service-hero-inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 52px;
 }
 .service-hero-text {
@@ -76,15 +92,24 @@
 .service-hero-image {
   flex: 0 0 290px;
   max-width: 290px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(123, 175, 212, 0.18);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 40px rgba(123, 175, 212, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .service-hero-image img {
   width: 100%;
-  border-radius: 18px;
+  border-radius: 12px;
   display: block;
+  filter: brightness(0.92) saturate(0.9);
 }
 @media (max-width: 860px) {
   .service-hero {
-    padding: 42px 0 38px 0;
+    padding: 114px 0 44px 0; /* 114px clears 95px nav + ~20px gap on mobile */
   }
   .service-hero-inner {
     flex-direction: column-reverse;
@@ -334,8 +359,9 @@
   font-size: 15px;
   font-weight: 300;
   line-height: 1.6;
+  border: 1px solid transparent;
   box-shadow: 0 2px 10px 0 rgba(123,175,212,0.06);
-  transition: background 0.3s, transform 0.3s, color 0.3s;
+  transition: background 0.4s, transform 0.4s, box-shadow 0.4s, border-color 0.4s, color 0.4s;
   display: flex;
   flex-direction: column;
 }
@@ -344,6 +370,7 @@
   font-size: 30px;
   margin-bottom: 14px;
   display: block;
+  transition: transform 0.4s;
 }
 .services-list > div h2 {
   color: #fff;
@@ -356,14 +383,21 @@
   margin-bottom: 0;
 }
 .services-list > div:hover {
-  background: #7BAFD4 !important;
-  color: #fff !important;
-  transform: translateY(-4px);
+  background: #0f1e2c !important;
+  color: #a8c4d8 !important;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(123, 175, 212, 0.18) !important;
+  border-color: rgba(123, 175, 212, 0.45) !important;
 }
-.services-list > div:hover h2,
-.services-list > div:hover i,
-.services-list > div:hover .learn-more-link {
+.services-list > div:hover h2 {
   color: #fff !important;
+}
+.services-list > div:hover i {
+  color: #7BAFD4 !important;
+  animation: iconFloat 2s ease-in-out infinite;
+}
+.services-list > div:hover .learn-more-link {
+  color: #7BAFD4 !important;
 }
 
 /* Learn More Link */

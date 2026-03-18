@@ -9,12 +9,20 @@
     <script src="https://kit.fontawesome.com/4370b8b097.js" crossorigin="anonymous"></script>
 </head>
 <body class="index-page">
-<div id="header">
+<div id="nav-wrapper">
     <div class="container">
         <div id="navbar-include"></div>
+    </div>
+</div>
+<div id="header">
+    <div class="container hero-container">
         <div class="header-text">
-            <p>Machine Learning Engineer &amp; Data Scientist</p>
+            <p><span id="rotating-text">Machine Learning Engineer &amp; Data Scientist</span></p>
             <h1>Hi, I'm <span>Uli</span> Rönnau</h1>
+        </div>
+        <div class="hero-image-frame">
+            <!-- Replace ulises-user-2.jpg with your preferred hero image -->
+            <img src="images/ulises-user-2.jpg" alt="Uli Rönnau" class="hero-portrait-img">
         </div>
     </div>
 </div>
@@ -23,7 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/ulises-user-2.jpg" alt="Ulises Portrait">
+                <img src="images/ulises-user-4.PNG" alt="Ulises Portrait">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -165,6 +173,11 @@
         document.getElementById("sidemenu").style.right = "-200px";
       }
     });
+
+  // Navbar scroll state
+  window.addEventListener('scroll', function () {
+    document.getElementById('nav-wrapper').classList.toggle('nav-scrolled', window.scrollY > 50);
+  });
 </script>
 
 <script>
@@ -235,6 +248,23 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Error!', error.message))
     })
+</script>
+<script>
+    const rotatingPhrases = [
+        'Machine Learning Engineer &amp; Data Scientist',
+        'Data Science @ Top 5 Public University in the US',
+        'Trilingual &middot; English, German &amp; Spanish'
+    ];
+    let rotatingIndex = 0;
+    const rotatingEl = document.getElementById('rotating-text');
+    setInterval(function() {
+        rotatingEl.classList.add('fade-out');
+        setTimeout(function() {
+            rotatingIndex = (rotatingIndex + 1) % rotatingPhrases.length;
+            rotatingEl.innerHTML = rotatingPhrases[rotatingIndex];
+            rotatingEl.classList.remove('fade-out');
+        }, 500);
+    }, 3500);
 </script>
 </body>
 </html>

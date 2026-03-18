@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diabetes Self-Test — Ulises Rönnau</title>
     <link rel="stylesheet" href="../css/project_style.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
     <script src="https://kit.fontawesome.com/4370b8b097.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="header">
+<div id="nav-wrapper">
     <div class="container">
         <nav>
             <img src="../images/ulises-logo.png" class="logo">
@@ -117,16 +118,12 @@
 </script>
 
 <script>
-
     var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0"
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px"
-    }
-
+    function openmenu(){ sidemenu.style.right = "0"; }
+    function closemenu(){ sidemenu.style.right = "-200px"; }
+    window.addEventListener('scroll', function () {
+        document.getElementById('nav-wrapper').classList.toggle('nav-scrolled', window.scrollY > 50);
+    });
 </script>
 
 <script>
